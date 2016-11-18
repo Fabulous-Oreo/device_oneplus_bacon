@@ -75,6 +75,9 @@ telephony.lteOnGsmDevice=1
 # SdcardFS
 ro.sys.sdcardfs=false
 
+# Network
+persist.data.qmi.adb_logmask=0
+
 # Sensors
 ro.qc.sdk.camera.facialproc=true
 ro.qc.sdk.gestures.camera=false
