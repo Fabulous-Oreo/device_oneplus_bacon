@@ -253,4 +253,4 @@ $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974
 endif
 
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)
