@@ -21,6 +21,12 @@ endif
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
 
+# AOSP Packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    messaging \
+    Terminal
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
