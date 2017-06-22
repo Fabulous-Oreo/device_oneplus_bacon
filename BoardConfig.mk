@@ -102,10 +102,6 @@ endif
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 
-# Flags for modem (we still have an old modem)
-BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
-BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
-
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 16777216
