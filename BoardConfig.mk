@@ -54,6 +54,7 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := lineageos_bacon_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+PRODUCT_VENDOR_KERNEL_HEADERS :=  $(DEVICE_PATH)/kernel-headers
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
