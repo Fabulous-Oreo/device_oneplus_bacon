@@ -183,4 +183,6 @@ TARGET_LDPRELOAD := libNimsWrap.so
 endif
 endif
 
+DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
+
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
