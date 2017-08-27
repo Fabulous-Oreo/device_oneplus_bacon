@@ -260,7 +260,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     hostapd \
     wcnss_service \
-    wpa_supplicant
+    wpa_supplicant \
+    wificond \
+    wifilogd
 
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
