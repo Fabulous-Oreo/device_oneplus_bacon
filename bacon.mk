@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8974 \
     liboverlay
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
 # Gralloc
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
