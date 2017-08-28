@@ -187,7 +187,7 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl
+    android.hardware.nfc@1.0-impl \
     com.android.nfc_extras \
     NfcNci \
     nfc_nci.bacon \
