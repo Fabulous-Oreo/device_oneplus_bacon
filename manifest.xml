@@ -21,12 +21,6 @@
         <version>3.0</version>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.boot</name>
-        <transport arch="32">passthrough</transport>
-        <impl level="generic"></impl>
-        <version>1.0</version>
-    </hal>
-	<hal format="hidl">
         <name>android.hardware.renderscript</name>
         <transport arch="32">passthrough</transport>
         <version>1.0</version>
