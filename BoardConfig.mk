@@ -79,6 +79,12 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_SMD_TTY := true
 
+# Camera
+TARGET_USE_COMPAT_GRALLOC_ALIGN := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+TARGET_USE_VENDOR_CAMERA_EXT := true
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
