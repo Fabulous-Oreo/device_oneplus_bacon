@@ -382,4 +382,7 @@
 
     <!-- Enable blur support
     <bool name="config_uiBlurEnabled">true</bool>-->
+
+    <!-- Night Mode -->
+    <bool name="config_nightDisplayAvailable">true</bool>
 </resources>
