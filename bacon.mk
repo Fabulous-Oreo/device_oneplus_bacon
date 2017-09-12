@@ -114,10 +114,6 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
