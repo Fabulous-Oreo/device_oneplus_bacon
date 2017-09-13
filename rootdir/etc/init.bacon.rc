@@ -354,7 +354,6 @@ service qseecomd /system/bin/qseecomd
 service charger /sbin/healthd -c
     class charger
     critical
-    seclabel u:r:healthd:s0
 
 service hvdcp /system/bin/hvdcp
     class core
@@ -370,7 +369,6 @@ on property:persist.usb.hvdcp.detect=false
 service qbcharger /charger -m 1
     disabled
     oneshot
-    seclabel u:r:healthd:s0
 
 on property:sys.qbcharger.enable=true
     start qbcharger
