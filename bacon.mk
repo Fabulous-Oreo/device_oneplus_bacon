@@ -91,6 +91,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
