@@ -14,18 +14,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Gesture shortcuts -->
+    <string name="screen_gestures_panel_title">Doze Pulse</string>
+    <string name="screen_gestures_panel_summary">Controlli avanzati per quando lo schermo è spento</string>
 
-    <string name="screen_gestures_panel_title">Doze 模式</string>
-    <string name="screen_gestures_panel_summary">Doze模式详细设置</string>
+    <string name="ambient_display_title">Display ambient</string>
 
-    <string name="ambient_display_title">环境显示</string>
+    <string name="ambient_display_enable_title">Display ambient</string>
+    <string name="ambient_display_enable_summary">Accendi lo schermo quando ricevi notifiche</string>
 
-    <string name="ambient_display_enable_title">环境显示</string>
-    <string name="ambient_display_enable_summary">收到通知时点亮屏幕</string>
+    <string name="hand_wave_gesture_title">Hand wave</string>
+    <string name="hand_wave_gesture_summary">Visualizza le notifiche passando la mano sul sensore di prossimità</string>
 
-    <string name="hand_wave_gesture_title">浮动手势</string>
-    <string name="hand_wave_gesture_summary">息屏时手略过屏幕会显示通知</string>
-
-    <string name="pocket_gesture_title">口袋模式</string>
-    <string name="pocket_gesture_summary">息屏时手机从口袋中掏出会显示通知</string>
+    <string name="pocket_gesture_title">Pocket</string>
+    <string name="pocket_gesture_summary">Visualizza le notifiche all&apos;estrazione dalla tasca</string>
 </resources>
