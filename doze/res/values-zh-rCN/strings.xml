@@ -14,8 +14,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Gesture shortcuts -->
-    <string name="screen_gestures_panel_title">打盹模式</string>
-    <string name="screen_gestures_panel_summary">打盹模式详细设置</string>
+
+    <string name="screen_gestures_panel_title">Doze 模式</string>
+    <string name="screen_gestures_panel_summary">Doze模式详细设置</string>
 
     <string name="ambient_display_title">环境显示</string>
 
