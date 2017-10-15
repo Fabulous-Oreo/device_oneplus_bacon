@@ -26,5 +26,5 @@
     <string name="hand_wave_gesture_summary">Visualizza le notifiche passando la mano sul sensore di prossimità</string>
 
     <string name="pocket_gesture_title">Pocket</string>
-    <string name="pocket_gesture_summary">Visualizza le notifiche all&apos;estrazione dalla tasca</string>
+    <string name="pocket_gesture_summary">Visualizza le notifiche quando il dispositivo è estratto dalla tasca</string>
 </resources>
