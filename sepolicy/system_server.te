@@ -8,3 +8,4 @@ allow system_server proc_touchpanel:dir { search };
 r_dir_file(system_server, sysfs_usb_supply);
 
 allow system_server self:socket ioctl;
+allow system_server sensors_device:chr_file getattr;
