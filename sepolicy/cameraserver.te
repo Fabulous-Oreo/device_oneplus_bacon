@@ -5,3 +5,4 @@ allow cameraserver init:unix_stream_socket connectto;
 allow cameraserver property_socket:sock_file write;
 allow cameraserver system_data_file:sock_file write;
 allow cameraserver system_prop:property_service set;
+allow cameraserver init:unix_dgram_socket sendto;

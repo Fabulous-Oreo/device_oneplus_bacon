@@ -1,0 +1,4 @@
+#============= init ==============
+allow init ion_device:chr_file write;
+allow init socket_device:sock_file write;
+allow init video_device:chr_file { ioctl write };
