@@ -289,6 +289,10 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    BlackTheme \
+    DarkTheme \
+    PixelBlackTheme \
+    PixelDarkTheme \
     PixelTheme \
     Stock
 
