@@ -30,7 +30,7 @@
         <activity
             android:name=".WakeUpGestureSettings"
             android:label="@string/screen_gestures_panel_title"
-            android:theme="@android:style/Theme.Material.Settings">
+            android:theme="@android:style/Theme.DeviceDefault.Settings">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
