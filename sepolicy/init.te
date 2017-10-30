@@ -4,6 +4,7 @@ allow init video_device:chr_file { ioctl write };
 allow init self:socket { bind create read write };
 allow init self:socket ioctl;
 allowxperm init self:socket ioctl { 0x0000c302 0x0000c304};
+allow init self:netlink_route_socket read;
 allow init sensors_device:chr_file { getattr ioctl };
 allow init sensors_persist_file:file append;
 allow init socket_device:sock_file { write create getattr setattr };
