@@ -343,5 +343,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
 
+# Bionic
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bionic.ld.warning=0
+
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
