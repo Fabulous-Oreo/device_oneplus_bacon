@@ -11,3 +11,6 @@
 # Old camera socket
 /data/misc/camera/cam_socket1                           u:object_r:camera_socket:s0
 /data/misc/camera/cam_socket2                           u:object_r:camera_socket:s0
+
+# Bluetooth
+/system/bin/hci_qcomm_init                              u:object_r:hci_attach_exec:s0
