@@ -1,0 +1,3 @@
+allow toolbox init:fifo_file read;
+allow toolbox smem_log_device:chr_file { read write };
+

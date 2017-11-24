@@ -1,0 +1,3 @@
+#============= radio ==============
+allow radio qmuxd_socket:sock_file write;
+allow radio qmuxd_socket:dir search;
