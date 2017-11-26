@@ -1,0 +1,2 @@
+allow qmuxd diag_device:chr_file rw_file_perms;
+allow qmuxd sysfs:file read;

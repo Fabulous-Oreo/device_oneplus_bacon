@@ -1,3 +1,0 @@
-#============= crash_dump ==============
-allow crash_dump gatekeeper_data_file:dir search;
-

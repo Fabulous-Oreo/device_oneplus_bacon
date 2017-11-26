@@ -12,3 +12,5 @@ allow system_server sensors_device:chr_file getattr;
 
 allow system_server socket_device:sock_file write;
 
+allow system_server sensors_socket:sock_file write;
+allow system_server sensors:unix_stream_socket connectto;

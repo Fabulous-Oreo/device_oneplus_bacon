@@ -1,4 +1,4 @@
 #============= rild ==============
 allow rild radio_data_file:dir { write read open add_name remove_name search };
-allow rild radio_data_file:file { write getattr read lock create unlink open };
-
+allow rild radio_data_file:file { write getattr read lock create unlink open ioctl };
+allowxperm rild radio_data_file:file ioctl { 0x0000f50c };

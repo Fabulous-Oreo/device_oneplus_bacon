@@ -1,2 +1,4 @@
 # Cleanup sockets
 allow location location_data_file:sock_file unlink;
+allow location system_data_file:sock_file { create setattr unlink };
+allow location system_data_file:dir { add_name remove_name write };

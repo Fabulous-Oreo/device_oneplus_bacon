@@ -1,3 +1,7 @@
 # Allow rmt_storage to backup/restore NV contents
 allow rmt_storage nvbackup_block_device:blk_file rw_file_perms;
 allow rmt_storage self:capability dac_override;
+
+allow rmt_storage sysfs:dir { read open };
+allow rmt_storage sysfs:file { read open getattr };
+allow rmt_storage self:capability sys_admin;

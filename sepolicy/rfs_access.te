@@ -1,0 +1,2 @@
+allow rfs_access self:socket ioctl;
+allowxperm rfs_access self:socket ioctl { 0x0000c304 };

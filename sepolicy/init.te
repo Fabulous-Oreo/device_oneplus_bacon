@@ -23,6 +23,9 @@ allow init self:netlink_route_socket { bind create getattr nlmsg_read nlmsg_writ
 allow init self:netlink_socket { write bind create };
 allow init self:rawip_socket { create getopt setopt };
 allow init self:tcp_socket { create ioctl };
+allowxperm init self:udp_socket ioctl { 0x0000c305 0x000089fd 0x000089f2 0x000089f3 };
+allowxperm init self:udp_socket ioctl { 0x000089f4 0x000089f8 0x000089f9 0x00008946 };
+allowxperm init self:udp_socket ioctl { 0x00008916 0x00008922 0x000089fb 0x00008939 };
 allow init smd_device:chr_file { ioctl write };
 allow init smem_log_device:chr_file { ioctl write };
 allow init ssd_device:blk_file write;
@@ -34,7 +37,8 @@ allow init proc_dirty_ratio:file write;
 allow init qdsp_device:chr_file ioctl;
 allow init netd_socket:sock_file write;
 allow init qmuxd_socket:sock_file write;
-allow init self:netlink_xfrm_socket create;
+allow init self:netlink_xfrm_socket { bind create };
 allow init wcnss_device:chr_file write;
 allow init netd:unix_stream_socket connectto;
-
+allow init gpu_device:chr_file { write ioctl };
+allow init alarm_device:chr_file write;

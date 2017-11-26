@@ -1,0 +1,2 @@
+allow sensors sensors_data_file:dir rw_dir_perms;
+allow sensors sensors_data_file:file { create setattr rw_file_perms };
