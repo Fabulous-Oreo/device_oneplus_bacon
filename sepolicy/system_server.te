@@ -14,3 +14,4 @@ allow system_server socket_device:sock_file write;
 
 allow system_server sensors_socket:sock_file write;
 allow system_server sensors:unix_stream_socket connectto;
+dontaudit system_server dalvikcache_data_file:file { execute write };

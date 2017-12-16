@@ -1,0 +1,2 @@
+#============= wcnss_service ==============
+allow wcnss_service wifi_prop:property_service set;
