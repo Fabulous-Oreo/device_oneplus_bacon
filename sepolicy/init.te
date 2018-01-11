@@ -1,4 +1,5 @@
 #============= init ==============
+allow init { domain -lmkd -crash_dump }:process noatsecure;
 allow init ion_device:chr_file write;
 allow init video_device:chr_file { ioctl write };
 allow init self:socket { bind create read write };
