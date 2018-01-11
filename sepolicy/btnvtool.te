@@ -1,0 +1,19 @@
+#============= btnvtool ==============
+
+init_daemon_domain(btnvtool)
+
+allow btnvtool debug_prop:file { getattr open read };
+allow btnvtool device:dir search;
+allow btnvtool init:fd use;
+allow btnvtool null_device:chr_file { read write };
+allow btnvtool proc:lnk_file read;
+allow btnvtool properties_device:dir getattr;
+allow btnvtool properties_serial:file { getattr open read };
+allow btnvtool property_contexts_file:file { getattr open read };
+allow btnvtool random_device:chr_file { getattr ioctl open read };
+allow btnvtool rootfs:lnk_file { getattr read };
+allow btnvtool self:dir search;
+allow btnvtool self:lnk_file read;
+allow btnvtool system_file:dir getattr;
+allow btnvtool system_file:file { getattr open read };
+allow btnvtool vendor_file:dir getattr;
