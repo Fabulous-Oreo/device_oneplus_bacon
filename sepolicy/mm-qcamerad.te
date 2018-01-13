@@ -1,4 +1,4 @@
-allow mm-qcamerad { surfaceflinger mediaserver cameraserver hal_graphics_allocator untrusted_app_25 }:fd use;
+allow mm-qcamerad { domain appdomain -isolated_app }:fd use;
 allow mm-qcamerad vendor_camera_data_file:file { read write open getattr };
 allow mm-qcamerad camera_socket:sock_file { create unlink write };
 allow mm-qcamerad camera_data_file:sock_file { create unlink };
