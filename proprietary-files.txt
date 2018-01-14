@@ -55,6 +55,7 @@ vendor/lib/libchromatix_ov5648_zsl.so
 
 # Face Unlock
 vendor/lib/libprotobuf-cpp-haxx.so|c280b24acc9c17ca20072d51be9f87b63434dc04
+vendor/lib/libfacenet-32.so|09cf052e838d6aa16f2f6d7932643f58172566ba
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
