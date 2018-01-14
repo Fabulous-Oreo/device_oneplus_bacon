@@ -44,3 +44,4 @@ allow init netd:unix_stream_socket connectto;
 allow init gpu_device:chr_file { write ioctl };
 allow init alarm_device:chr_file write;
 allow init functionfs:dir mounton;
+allow init system_file:file mounton;

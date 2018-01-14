@@ -179,6 +179,7 @@ on boot
     chown nfc nfc /dev/pn54x
 
 on post-fs-data
+    mount none /system/vendor/lib/libfacenet-32.so /system/lib/libfacenet.so bind
     mkdir /data/media 0770 media_rw media_rw
 
     # NFC: create data/nfc for nv storage
