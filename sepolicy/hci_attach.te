@@ -18,3 +18,4 @@ allow hci_attach persist_file:dir search;
 allow hci_attach vendor_shell_exec:file entrypoint;
 allow hci_attach vendor_toolbox_exec:file execute_no_trans;
 allow hci_attach qmuxd:unix_stream_socket connectto;
+allow hci_attach bluetooth_prop:property_service set;
