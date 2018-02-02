@@ -18,6 +18,14 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
+# aptX
+vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
+vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
+vendor/lib/libldacBT_abr.so|0b22afcc8e3b49c5af67b8957ac9e08ea158ab20
+vendor/lib/libldacBT_enc.so|7a5ced9eb3fcc5745a76ed1c94611af75abd5cd1
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|7b13cf50e7a5fa7cd59e28e54c6b7dc06889bcf7
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|867e374575edf2a445ed9fa774f5566f763f0756
+
 # DRM
 vendor/bin/qseecomd
 lib/libdrmdecrypt.so
