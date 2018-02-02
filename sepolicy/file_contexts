@@ -13,7 +13,7 @@
 /data/misc/camera/cam_socket2                           u:object_r:camera_socket:s0
 
 # Bluetooth
-/system/bin/hci_qcomm_init                              u:object_r:hci_attach_exec:s0
+/system/vendor/bin/hci_qcomm_init                              u:object_r:hci_attach_exec:s0
 
 # gpuclk
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk        u:object_r:sysfs_thermal:s0
