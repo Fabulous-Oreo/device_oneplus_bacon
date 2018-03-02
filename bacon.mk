@@ -379,8 +379,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bionic.ld.warning=0
 
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
-    /system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so
+    /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
+    /vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
