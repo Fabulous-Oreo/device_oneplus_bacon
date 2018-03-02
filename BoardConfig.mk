@@ -19,6 +19,7 @@
 -include device/oppo/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/bacon
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
