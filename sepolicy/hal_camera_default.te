@@ -1,0 +1,4 @@
+#============= hal_camera_default ==============
+allow hal_camera_default camera_data_file:sock_file write;
+allow hal_camera_default sensorservice_service:service_manager find;
+binder_call(hal_camera_default, servicemanager)

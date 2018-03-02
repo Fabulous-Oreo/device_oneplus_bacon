@@ -1,5 +1,7 @@
 #============= untrusted_app ==============
 dontaudit untrusted_app proc:file read;
+dontaudit untrusted_app proc_stat:file { getattr open read };
 
 #============= untrusted_app_25 ==============
 dontaudit untrusted_app_25 proc:file read;
+dontaudit untrusted_app_25 apk_data_file:file setattr;
