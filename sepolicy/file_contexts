@@ -25,6 +25,7 @@
 # Camera
 /data/cam_socket.*                            u:object_r:camera_socket:s0
 /data/fdAlbum                                 u:object_r:vendor_camera_data_file:s0
+/vendor/bin/hw/android\.hardware\.camera\.provider@2\.4-service.bacon          u:object_r:hal_camera_default_exec:s0
 
 # audiod
 /system/bin/audiod                            u:object_r:audiod_exec:s0

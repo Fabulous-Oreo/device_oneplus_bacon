@@ -2,3 +2,4 @@
 allow priv_app device:dir { read open };
 allow priv_app proc_interrupts:file { read open };
 allow priv_app proc_modules:file { read getattr open };
+allow priv_app proc_stat:file read;

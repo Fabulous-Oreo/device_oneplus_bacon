@@ -1,3 +1,9 @@
 #============= servicemanager ==============
 allow servicemanager rild:dir search;
 allow servicemanager rild:file read;
+allow servicemanager hal_camera_default:dir search;
+allow servicemanager hal_camera_default:file { open read };
+allow servicemanager hal_camera_default:process getattr;
+allow servicemanager hal_camera_default:dir search;
+allow servicemanager hal_camera_default:file { open read };
+allow servicemanager hal_camera_default:process getattr;
