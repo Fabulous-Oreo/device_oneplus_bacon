@@ -200,5 +200,6 @@ endif
 endif
 
 DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
+PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
