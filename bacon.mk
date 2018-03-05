@@ -139,6 +139,11 @@ PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
 
+# Gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
@@ -253,11 +258,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
-
-# Disable Treble properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false \
-    camera.disable_treble=true
 
 # Permissions
 PRODUCT_COPY_FILES += \
