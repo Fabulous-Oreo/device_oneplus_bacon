@@ -29,3 +29,6 @@
 
 # audiod
 /system/bin/audiod                            u:object_r:audiod_exec:s0
+
+# Location
+/data/misc/location/[^/]+/.+                  u:object_r:location_data_file:s0
