@@ -1,0 +1,2 @@
+#============= hal_memtrack_default ==============
+dontaudit hal_memtrack_default { domain -surfaceflinger }:file read;
