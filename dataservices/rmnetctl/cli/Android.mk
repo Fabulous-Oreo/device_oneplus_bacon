@@ -13,4 +13,7 @@ LOCAL_MODULE := rmnetcli
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SHARED_LIBRARIES := librmnetctl
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin
+
 include $(BUILD_EXECUTABLE)
