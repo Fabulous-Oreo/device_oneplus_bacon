@@ -109,6 +109,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
+# Disable lockscreen discard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lockscreen.secdiscard=false
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl
