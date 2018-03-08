@@ -38,6 +38,8 @@ namespace qcamera {
 
 using namespace android;
 
+#define MAX_CAM_INSTANCES 3
+
 class TestContext;
 
 class CameraContext : public CameraListener,
@@ -53,10 +55,11 @@ public:
     typedef struct {
         unsigned char *  Data;
         int      Type;
-        unsigned Size;
+        size_t   Size;
     } Sections_t;
 
 public:
+    static const char KEY_ZSL[];
 
     CameraContext(int cameraIndex);
     virtual ~CameraContext();
@@ -93,12 +96,14 @@ public:
     status_t unconfigureRecorder();
     Sections_t *FindSection(int SectionType);
     status_t ReadSectionsFromBuffer (unsigned char *buffer,
-        unsigned int buffer_size, ReadMode_t ReadMode);
+            size_t buffer_size, ReadMode_t ReadMode);
     virtual IBinder* onAsBinder();
     void setTestCtxInstance(TestContext *instance);
 
     void printMenu(sp<CameraContext> currentCamera);
     void printSupportedParams();
+    const char *getZSL();
+    void setZSL(const char *value);
 
 
     int getCameraIndex() { return mCameraIndex; }
@@ -129,14 +134,12 @@ public:
 
 private:
 
-    status_t createPreviewSurface(unsigned int width,
-            unsigned int height,
-            int32_t pixFormat);
+    status_t createPreviewSurface(int width, int height, int32_t pixFormat);
     status_t destroyPreviewSurface();
 
     status_t saveFile(const sp<IMemory>& mem, String8 path);
     SkBitmap * PiPCopyToOneFile(SkBitmap *bitmap0, SkBitmap *bitmap1);
-    SkBitmap *decodeJPEG(const sp<IMemory>& mem);
+    status_t decodeJPEG(const sp<IMemory>& mem, SkBitmap *skBM);
     status_t encodeJPEG(SkWStream * stream, const SkBitmap *bitmap,
         String8 path);
     void previewCallback(const sp<IMemory>& mem);
@@ -153,20 +156,16 @@ private:
     bool mDoPrintMenu;
     bool mPiPCapture;
     static int mPiPIdx;
-    int mfmtMultiplier;
-    int mWidthTmp[2];
-    int mHeightTmp[2];
-    int mSectionsRead;
-    int mSectionsAllocated;
+    unsigned int mfmtMultiplier;
+    int mWidthTmp;
+    int mHeightTmp;
+    size_t mSectionsRead;
+    size_t mSectionsAllocated;
     Sections_t * mSections;
     Sections_t * mJEXIFTmp;
     Sections_t mJEXIFSection;
     int mHaveAll;
     TestContext *mInterpr;
-    Mutex mViVLock;
-    Condition mViVCond;
-    bool mViVinUse;
-
 
     sp<Camera> mCamera;
     sp<SurfaceComposerClient> mClient;
@@ -176,12 +175,12 @@ private:
     CameraParameters mParams;
     SkBitmap *skBMDec;
     SkImageEncoder* skJpegEnc;
-    static SkBitmap *skBMtmp[2];
-    static sp<IMemory> PiPPtrTmp[2];
+    SkBitmap skBMtmp;
+    sp<IMemory> PiPPtrTmp;
 
-    int mCurrentPreviewSizeIdx;
-    int mCurrentPictureSizeIdx;
-    int mCurrentVideoSizeIdx;
+    size_t mCurrentPreviewSizeIdx;
+    size_t mCurrentPictureSizeIdx;
+    size_t mCurrentVideoSizeIdx;
     Vector<Size> mSupportedPreviewSizes;
     Vector<Size> mSupportedPictureSizes;
     Vector<Size> mSupportedVideoSizes;
@@ -192,8 +191,6 @@ private:
 
     void useLock();
     void signalFinished();
-    void mutexLock();
-    void mutexUnlock();
 
     //------------------------------------------------------------------------
     // JPEG markers consist of one or more 0xFF bytes, followed by a marker
@@ -249,6 +246,7 @@ public:
         ENABLE_PRV_CALLBACKS_CMD = '&',
         EXIT_CMD = 'q',
         DELAY = 'd',
+        ZSL_CMD = 'z',
         INVALID_CMD = '0'
     };
 
@@ -274,7 +272,6 @@ public:
     Command getCommand(sp<CameraContext> currentCamera);
     void releasePiPBuff();
     status_t configureViVCodec();
-    //status_t configureViVCodec();
     void setViVSize(Size VideoSize, int camIndex);
     void setTestCtxInst(TestContext *instance);
     status_t unconfigureViVCodec();
@@ -286,7 +283,7 @@ private:
     static const int numberOfCommands;
 
     bool mUseScript;
-    int mCmdIndex;
+    size_t mCmdIndex;
     char *mScript;
     Vector<Command> mCommands;
     TestContext *mTestContext;
@@ -301,18 +298,30 @@ public:
     TestContext();
     ~TestContext();
 
-    int32_t GetCamerasNum();
+    size_t GetCamerasNum();
     status_t FunctionalTest();
     status_t AddScriptFromFile(const char *scriptFile);
     void setViVSize(Size VideoSize, int camIndex);
+    void PiPLock();
+    void PiPUnlock();
+    void ViVLock();
+    void ViVUnlock();
 
 private:
+    sp<CameraContext> camera[MAX_CAM_INSTANCES];
     char GetNextCmd(sp<qcamera::CameraContext> currentCamera);
-    int  mCurrentCameraIndex;
-    int  mSaveCurrentCameraIndex;
+    size_t mCurrentCameraIndex;
+    size_t mSaveCurrentCameraIndex;
     Vector< sp<qcamera::CameraContext> > mAvailableCameras;
     bool mTestRunning;
     Interpreter *mInterpreter;
+    Mutex mPiPLock;
+    Condition mPiPCond;
+    bool mPiPinUse;
+    Mutex mViVLock;
+    Condition mViVCond;
+    bool mViVinUse;
+    bool mIsZSLOn;
 
     typedef struct ViVBuff_t{
         void *buff;
