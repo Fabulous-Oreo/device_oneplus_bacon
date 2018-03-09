@@ -8,6 +8,8 @@ LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_HEADER_LIBRARIES := libhardware_headers
+
 LOCAL_SHARED_LIBRARIES := \
     libutils \
     libcutils \
@@ -62,6 +64,8 @@ LOCAL_MODULE_OWNER := qcom
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
+
+LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 ## Libs
 LOCAL_SHARED_LIBRARIES := \
