@@ -32,7 +32,7 @@
 #include <cutils/properties.h>
 #include <math.h>
 #include <utils/Errors.h>
-#include <utils/Log.h>
+#include <log/log.h>
 #include <string.h>
 #include <stdlib.h>
 #include <gralloc_priv.h>

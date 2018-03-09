@@ -20,7 +20,7 @@
 /*#error uncomment this for compiler test!*/
 
 #define LOG_TAG "QCameraHWI_Rdi"
-#include <utils/Log.h>
+#include <log/log.h>
 #include <utils/threads.h>
 #include <fcntl.h>
 #include <sys/mman.h>

@@ -85,9 +85,9 @@ LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
 
 LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH    := hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
-LOCAL_CLANG := false
 LOCAL_32_BIT_ONLY := true
 LOCAL_MODULE_TAGS := optional
 

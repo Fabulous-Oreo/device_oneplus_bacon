@@ -30,7 +30,7 @@
 #define LOG_TAG "QCamera2HWI"
 #define ATRACE_TAG ATRACE_TAG_CAMERA
 
-#include <utils/Log.h>
+#include <log/log.h>
 #include <cutils/properties.h>
 #include <hardware/camera.h>
 #include <stdlib.h>

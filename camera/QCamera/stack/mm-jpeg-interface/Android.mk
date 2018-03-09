@@ -28,6 +28,7 @@ LOCAL_SRC_FILES := \
     src/mm_jpeg.c \
     src/mm_jpeg_interface.c
 
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE           := libmmjpeg_interface
 LOCAL_32_BIT_ONLY := true
 LOCAL_PRELINK_MODULE   := false
