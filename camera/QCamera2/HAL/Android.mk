@@ -12,6 +12,7 @@ LOCAL_SRC_FILES := \
         QCameraChannel.cpp \
         QCameraStream.cpp \
 	QCameraPostProc.cpp \
+        CameraParameters.cpp \
         QCamera2HWICallbacks.cpp \
         QCameraParameters.cpp \
         QCameraThermalAdapter.cpp \
@@ -64,9 +65,10 @@ LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl libgui
-LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libhidltransport libsensor android.hidl.token@1.0-utils
+LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libgui
+LOCAL_SHARED_LIBRARIES += libmmcamera_interface libhidltransport android.hidl.token@1.0-utils
 LOCAL_STATIC_LIBRARIES := libarect
+LOCAL_STATIC_LIBRARIES += android.hardware.camera.common@1.0-helper
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_PROPRIETARY_MODULE := true

@@ -51,6 +51,7 @@ LOCAL_CFLAGS += -Wall -Werror
 
 LOCAL_SRC_FILES := $(MM_CAM_FILES)
 
+LOCAL_USE_VNDK         := true
 LOCAL_MODULE           := libmmcamera_interface
 LOCAL_PRELINK_MODULE   := false
 LOCAL_CLANG := false
