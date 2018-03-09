@@ -53,9 +53,9 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../../stack/mm-jpeg-interface/inc\
         $(TARGET_OUT_INTERMEDIATES)/include/mm-camera-interface_badger \
 
-LOCAL_C_INCLUDES += hardware/qcom/display/libgralloc \
-        hardware/qcom/display/libgenlock \
-        hardware/qcom/media/libstagefrighthw \
+LOCAL_C_INCLUDES += hardware/qcom/display/msm8994/libgralloc \
+        hardware/qcom/display/msm8994/libgenlock \
+        hardware/qcom/media/msm8974/libstagefrighthw \
 	system/media/camera/include
 
 # if debug service layer and up , use stub camera!
@@ -74,7 +74,6 @@ LOCAL_CFLAGS += -include bionic/libc/include/sys/socket.h
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE:= camera.$(TARGET_BOARD_PLATFORM)
-LOCAL_32_BIT_ONLY := true
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 

@@ -20,7 +20,7 @@
 //#define LOG_NDEBUG 0
 
 #define LOG_TAG "QCameraHWI"
-#include <log/log.h>
+#include <utils/Log.h>
 #include <utils/threads.h>
 #include <cutils/properties.h>
 #include <fcntl.h>

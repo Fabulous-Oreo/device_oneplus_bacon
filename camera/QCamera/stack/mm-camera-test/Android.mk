@@ -53,7 +53,6 @@ LOCAL_SHARED_LIBRARIES:= \
          libcutils libdl
 
 LOCAL_MODULE:= mm-qcamera-app
-LOCAL_32_BIT_ONLY := true
 
 LOCAL_MODULE_TAGS := optional
 

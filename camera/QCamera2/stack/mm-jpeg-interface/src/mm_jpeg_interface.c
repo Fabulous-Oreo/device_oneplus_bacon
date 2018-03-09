@@ -27,15 +27,12 @@
  *
  */
 
-#include <stdlib.h>
 #include <pthread.h>
 #include <errno.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <cutils/properties.h>
-#include <stdlib.h>
 
 #include "mm_jpeg_dbg.h"
 #include "mm_jpeg_interface.h"
@@ -46,7 +43,6 @@ static mm_jpeg_obj* g_jpeg_obj = NULL;
 
 static pthread_mutex_t g_handler_lock = PTHREAD_MUTEX_INITIALIZER;
 static uint16_t g_handler_history_count = 0; /* history count for handler */
-volatile uint32_t gMmCameraJpegLogLevel = 0;
 
 /** mm_jpeg_util_generate_handler:
  *
@@ -294,27 +290,6 @@ uint32_t jpeg_open(mm_jpeg_ops_t *ops, mm_dimension picture_size)
   int32_t rc = 0;
   uint32_t clnt_hdl = 0;
   mm_jpeg_obj* jpeg_obj = NULL;
-  char prop[PROPERTY_VALUE_MAX];
-  uint32_t temp;
-  uint32_t log_level;
-  uint32_t debug_mask;
-  memset(prop, 0, sizeof(prop));
-
-  /*  Higher 4 bits : Value of Debug log level (Default level is 1 to print all CDBG_HIGH)
-      Lower 28 bits : Control mode for sub module logging(Only 3 sub modules in HAL)
-                      0x1 for HAL
-                      0x10 for mm-camera-interface
-                      0x100 for mm-jpeg-interface  */
-  property_get("persist.camera.hal.debug.mask", prop, "268435463"); // 0x10000007=268435463
-  temp = (uint32_t)atoi(prop);
-  log_level = ((temp >> 28) & 0xF);
-  debug_mask = (temp & HAL_DEBUG_MASK_MM_JPEG_INTERFACE);
-  if (debug_mask > 0)
-      gMmCameraJpegLogLevel = log_level;
-  else
-      gMmCameraJpegLogLevel = 0; // Debug logs are not required if debug_mask is zero
-
-  CDBG_HIGH("%s gMmCameraJpegLogLevel=%d",__func__, gMmCameraJpegLogLevel);
 
   pthread_mutex_lock(&g_intf_lock);
   /* first time open */

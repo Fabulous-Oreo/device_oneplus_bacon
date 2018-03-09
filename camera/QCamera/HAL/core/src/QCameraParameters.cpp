@@ -29,7 +29,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 #define LOG_TAG "QCameraParams"
-#include <log/log.h>
+#include <utils/Log.h>
 #include <string.h>
 #include <stdlib.h>
 #include <camera/QCameraParameters.h>

@@ -22,7 +22,7 @@
 //#define ALOG_NDEBUG 0
 #define ALOG_NIDEBUG 0
 #define LOG_TAG "QCameraHAL"
-#include <log/log.h>
+#include <utils/Log.h>
 #include <utils/threads.h>
 #include <fcntl.h>
 #include <sys/mman.h>

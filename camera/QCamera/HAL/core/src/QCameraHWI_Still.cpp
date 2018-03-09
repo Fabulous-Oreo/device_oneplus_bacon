@@ -23,7 +23,7 @@
 #define LOG_NDDEBUG 0
 #define LOG_NIDEBUG 0
 #define LOG_TAG "QCameraHWI_Still"
-#include <log/log.h>
+#include <utils/Log.h>
 #include <utils/threads.h>
 #include <fcntl.h>
 #include <sys/mman.h>

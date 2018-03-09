@@ -28,7 +28,7 @@
 */
 
 #include <utils/Errors.h>
-#include <log/log.h>
+#include <utils/Log.h>
 #include "QCameraQueue.h"
 
 namespace qcamera {

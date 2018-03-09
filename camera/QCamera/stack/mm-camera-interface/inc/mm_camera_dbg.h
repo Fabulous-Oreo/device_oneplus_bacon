@@ -38,7 +38,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     #undef LOG_TAG
     #define LOG_NIDEBUG 0
     #define LOG_TAG "mm-camera-intf"
-    #include <log/log.h>
+    #include <utils/Log.h>
   #else
     #include <stdio.h>
     #define ALOGE CDBG
@@ -52,7 +52,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     #undef LOG_TAG
     #define LOG_NIDEBUG 0
     #define LOG_TAG "mm-camera-intf"
-    #include <log/log.h>
+    #include <utils/Log.h>
     #define CDBG(fmt, args...) ALOGE(fmt, ##args)
   #else
     #include <stdio.h>

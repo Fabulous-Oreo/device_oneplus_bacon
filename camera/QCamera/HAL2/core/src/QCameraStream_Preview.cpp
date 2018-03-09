@@ -17,7 +17,7 @@
 /*#error uncomment this for compiler test!*/
 
 #define ALOG_TAG "QCameraHWI_Preview"
-#include <log/log.h>
+#include <utils/Log.h>
 #include <utils/threads.h>
 #include <fcntl.h>
 #include <sys/mman.h>

@@ -2,8 +2,10 @@ OLD_LOCAL_PATH := $(LOCAL_PATH)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_CLANG_CFLAGS += \
+        -Wno-error=unused-variable
+        
 LOCAL_CFLAGS+= -D_ANDROID_
-LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
 
 LOCAL_C_INCLUDES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
@@ -41,10 +43,9 @@ LOCAL_SRC_FILES := \
     src/mm_jpegdec_interface.c \
     src/mm_jpegdec.c
 
-LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE           := libmmjpeg_interface
-LOCAL_32_BIT_ONLY := true
 LOCAL_PRELINK_MODULE   := false
+LOCAL_CLANG := false
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libqomx_core
 LOCAL_MODULE_TAGS := optional
 
