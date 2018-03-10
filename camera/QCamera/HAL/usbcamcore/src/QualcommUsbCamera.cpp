@@ -30,7 +30,7 @@
 #define ALOG_NIDEBUG 0
 #define LOG_TAG "QualcommUsbCamera"
 
-#include <utils/Log.h>
+#include <log/log.h>
 #include <utils/threads.h>
 #include <fcntl.h>
 #include <sys/mman.h>
