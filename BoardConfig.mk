@@ -207,5 +207,6 @@ endif
 DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
-
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+PRODUCT_SHIPPING_API_LEVEL := 19
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
