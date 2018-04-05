@@ -199,6 +199,9 @@ TARGET_LDPRELOAD := libNimsWrap.so
 endif
 endif
 
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
+DEVICE_MATRIX_FILE   := device/oneplus/bacon/compatibility_matrix.xml
+PRODUCT_VENDOR_MOVE_ENABLED := true
 
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
