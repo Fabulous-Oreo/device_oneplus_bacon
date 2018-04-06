@@ -204,8 +204,4 @@ DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
 DEVICE_MATRIX_FILE   := device/oneplus/bacon/compatibility_matrix.xml
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
-# Properties
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
