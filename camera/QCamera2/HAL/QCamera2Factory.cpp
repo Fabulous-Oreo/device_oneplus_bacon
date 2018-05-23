@@ -33,7 +33,6 @@
 #include <stdlib.h>
 #include <utils/Errors.h>
 #include <hardware/camera.h>
-#include <sensor/SensorManager.h>
 
 #include "QCamera2Factory.h"
 
@@ -143,10 +142,8 @@ int QCamera2Factory::getCameraInfo(int camera_id, struct camera_info *info)
 
 bool QCamera2Factory::can_talk_to_sensormanager()
 {
-    android::SensorManager& sensorManager(
-            android::SensorManager::getInstanceForPackage(android::String16("camera")));
-    android::Sensor const * const * sensorList;
-    return sensorManager.getSensorList(&sensorList) >= 0;
+    sleep(6);
+    return true;
 }
 
 /*===========================================================================

@@ -45,7 +45,7 @@ TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -147,6 +147,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 # NFC
 BOARD_NFC_CHIPSET := pn547
 
+# Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+BOARD_USES_GENERIC_AUDIO := true
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -158,8 +162,8 @@ TARGET_NO_RPC := true
 
 # Sepolicy
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += \
-    $(PLATFORM_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    $(PLATFORM_PATH)/sepolicy
 
 # Snapdragon LLVM
 TARGET_USE_SDCLANG := true
@@ -194,5 +198,6 @@ endif
 endif
 
 DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
+BOARD_VNDK_VERSION := current
 
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
