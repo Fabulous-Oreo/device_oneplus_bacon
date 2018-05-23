@@ -34,7 +34,7 @@
 #include <sys/mman.h>
 #include <utils/Errors.h>
 #include <gralloc_priv.h>
-#include <QComOMXMetadata.h>
+//#include <QComOMXMetadata.h>
 #include "QCamera2HWI.h"
 #include "QCameraMem.h"
 
