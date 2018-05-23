@@ -37,6 +37,7 @@
 #ifdef USE_GLIB
 #include <time.h>
 #endif /* USE_GLIB  */
+#include <ctime>
 #include "log_util.h"
 #include "platform_lib_includes.h"
 
