@@ -27,6 +27,15 @@ VNDK_SP_LIBRARIES := \
     libutils \
     libz
 
+EXTRA_VENDOR_LIBRARIES := \
+    libui \
+    android.hardware.configstore@1.0 \
+    android.hardware.configstore-utils \
+    android.hardware.graphics.composer@2.1 \
+    libfmq \
+    libhardware_legacy \
+    libbinder
+
 #-------------------------------------------------------------------------------
 # VNDK Modules
 #-------------------------------------------------------------------------------
