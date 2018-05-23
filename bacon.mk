@@ -301,6 +301,11 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service \
     power.msm8974
 
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.bacon \
