@@ -53,8 +53,8 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../../stack/mm-jpeg-interface/inc\
         $(TARGET_OUT_INTERMEDIATES)/include/mm-camera-interface_badger \
 
-LOCAL_C_INCLUDES += hardware/qcom/display/msm8994/libgralloc \
-        hardware/qcom/display/msm8994/libgenlock \
+LOCAL_C_INCLUDES += hardware/qcom/display/msm8974/libgralloc \
+        hardware/qcom/display/msm8974/libgenlock \
         hardware/qcom/media/msm8974/libstagefrighthw \
 	system/media/camera/include
 
