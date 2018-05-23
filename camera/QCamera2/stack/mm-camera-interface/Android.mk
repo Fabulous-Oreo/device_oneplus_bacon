@@ -26,9 +26,7 @@ ifeq ($(call is-board-platform-in-list,msm8974 msm8226 msm8610),true)
 endif
 
 LOCAL_CFLAGS += -D_ANDROID_
-LOCAL_COPY_HEADERS_TO := mm-camera-interface
-LOCAL_COPY_HEADERS += ../common/cam_intf.h
-LOCAL_COPY_HEADERS += ../common/cam_types.h
+LOCAL_EXPORT_C_INCLUDE_DIRS += $(LOCAL_PATH)/../common
 
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/inc \

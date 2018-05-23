@@ -153,6 +153,7 @@ BOARD_NFC_CHIPSET := pn547
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_USES_GENERIC_AUDIO := true
+TARGET_VENDOR_PROP += device/oneplus/bacon/system.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -202,5 +203,7 @@ endif
 
 DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
 BOARD_VNDK_VERSION := current
+PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 -include vendor/oneplus/bacon/BoardConfigVendor.mk

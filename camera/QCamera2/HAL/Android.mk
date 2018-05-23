@@ -65,7 +65,7 @@ LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libgui
-LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libhidltransport android.hidl.token@1.0-utils
+LOCAL_SHARED_LIBRARIES += libhidltransport android.hidl.token@1.0-utils
 LOCAL_STATIC_LIBRARIES := libarect android.hardware.camera.common@1.0-helper
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
