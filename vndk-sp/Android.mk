@@ -37,19 +37,19 @@ EXTRA_VENDOR_LIBRARIES := \
     libbinder
 
 EXTRA_VENDOR_LIBRARIES += \
-    libsqlite
-    libmedia
-    libxml2
-    libicuuc
-    libicui18n
-    libsonivox
-    libcamera_client
-    libaudioclient
-    libmedia_helper
-    libmediametrics
-    libmediadrm
-    libaudiomanager
-    libmemunreachable
+    libsqlite \
+    libmedia \
+    libxml2 \
+    libicuuc \
+    libicui18n \
+    libsonivox \
+    libcamera_client \
+    libaudioclient \
+    libmedia_helper \
+    libmediametrics \
+    libmediadrm \
+    libaudiomanager \
+    libmemunreachable \
     libmediautils
 
 #-------------------------------------------------------------------------------
