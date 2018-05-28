@@ -54,13 +54,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/vendor/etc/mixer_paths.xml
 
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
     audiod \
     audio.a2dp.default \
-    audio_policy.msm8974 \
-    audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
     libqcompostprocbundle \
@@ -70,9 +68,9 @@ PRODUCT_PACKAGES += \
     tinymix
 
 # Bluetooth HAL
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    libbt-vendor
+#PRODUCT_PACKAGES += \
+#    android.hardware.bluetooth@1.0-impl \
+#    libbt-vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/vendor/etc/a2dp_audio_policy_configuration.xml \
@@ -87,11 +85,11 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.device@1.0-impl \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service.bacon \
-    camera.msm8974 \
-    Snap-bacon
+#    camera.device@1.0-impl \
+#    android.hardware.camera.provider@2.4-impl \
+#    android.hardware.camera.provider@2.4-service.bacon \
+#    camera.msm8974 \
+#    Snap-bacon
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -128,7 +126,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_height=1024
 
 # Data
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     librmnetctl
 
 # Display
@@ -142,11 +140,11 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    copybit.msm8974 \
-    gralloc.msm8974 \
-    hwcomposer.msm8974 \
-    memtrack.msm8974 \
-    liboverlay \
+    libGLES_android \
+    libGLES_mesa \
+    hwcomposer.drm \
+	gralloc.drm \
+    gralloc.gbm \
     libboringssl-compat
 
 # GNSS HAL
@@ -155,13 +153,14 @@ PRODUCT_PACKAGES += \
 
 # Gralloc
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl
 
 # GPS
-PRODUCT_PACKAGES += \
-    gps.msm8974
+#PRODUCT_PACKAGES += \
+#    gps.msm8974
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
@@ -171,6 +170,7 @@ PRODUCT_COPY_FILES += \
 
 # HW Composer
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.composer@2.1-impl
 
 # Keymaster HAL
@@ -182,8 +182,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # Keystore
-PRODUCT_PACKAGES += \
-    keystore.msm8974
+#PRODUCT_PACKAGES += \
+#    keystore.msm8974
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -205,7 +205,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml
 
 # Media
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libdivxdrmdecrypt \
     libOmxAacEnc \
