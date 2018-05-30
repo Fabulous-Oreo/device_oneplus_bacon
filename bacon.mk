@@ -373,5 +373,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so
 
+CONFIG_FIRMWARE_FILES:= qcom/a330_pm4.fw qcom/a330_pfp.fw
+$(call inherit-product, device/oneplus/bacon/firmware.mk)
+
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
