@@ -205,5 +205,7 @@ endif
 endif
 
 DEVICE_MANIFEST_FILE := device/oneplus/bacon/manifest.xml
+PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
