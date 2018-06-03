@@ -52,6 +52,35 @@ EXTRA_VENDOR_LIBRARIES += \
     libmemunreachable \
     libmediautils
 
+EXTRA_VENDOR_LIBRARIES += \
+    android.hardware.drm@1.0 \
+    android.hardware.graphics.bufferqueue@1.0 \
+    android.hardware.media.omx@1.0 \
+    android.hardware.media@1.0 \
+    android.hidl.token@1.0 \
+    android.hidl.token@1.0-utils \
+    libaudioutils \
+    libcamera_metadata \
+    libdng_sdk \
+    libexpat \
+    libft2 \
+    libgraphicsenv \
+    libgui \
+    libheif \
+    libjpeg \
+    libnativebridge \
+    libnativehelper \
+    libnativeloader \
+    libpiex \
+    libpng \
+    libpowermanager \
+    libprotobuf-cpp-lite \
+    libskia \
+    libspeexresampler \
+    libstagefright_foundation \
+    libvulkan \
+    libziparchive
+
 #-------------------------------------------------------------------------------
 # VNDK Modules
 #-------------------------------------------------------------------------------
